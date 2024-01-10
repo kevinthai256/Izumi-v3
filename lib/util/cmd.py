@@ -1,5 +1,5 @@
 
-version = '2.7'
+version = '3.0'
 
 acatagory = {
   'general': 'General Commands',
@@ -14,7 +14,7 @@ acatagory = {
 
 Updates = """
 
-Made by Powiz | v2.7
+Made by Powiz | v3.0
 
 """
 
@@ -23,7 +23,7 @@ seperator = '•-•-•-•-•-•-•-•-•'
 log = f"""
 
 {seperator}
-Added Komi command and Tinder command
+Developing Komi command and Tinder command
 """
 
 
@@ -235,16 +235,12 @@ cmdinfo = [
     "bio": "Komi says something!",
     "Aliases": ['komi'],
     "Syntax":"`komi <text>`"
-    },
+    }
+,
   {"name": "Tinder!",
     "bio": "Gets a tinder profile! (use tindere to make one!)",
     "Aliases": ['tinder'],
     "Syntax":"`tinder <@user>`"
-    },
-  {"name": "Booru!",
-    "bio": "Look up images on danbooru!",
-    "Aliases": ['booru'],
-    "Syntax":"`booru <search>`"
     }
 ,
   {"name": "Anime GIF!",
