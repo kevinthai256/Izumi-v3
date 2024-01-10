@@ -1,0 +1,1 @@
+InfoTemplate = f'**Check out the channels below!**\n:\n| <#757396704491470969>\n| <#792544330187276348>\n| <#755517533343318039>'
