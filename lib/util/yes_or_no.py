@@ -1,0 +1,1 @@
+yes_or_no = ["My sources say no.", "I'm positve that's a no.", "Try again later, I'm lazy.", "Not so sure about that one.", "Definitely yes.", "The only right answer is yes.", "Probally, idk.", "Probally not."]

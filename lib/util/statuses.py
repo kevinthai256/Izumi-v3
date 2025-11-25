@@ -1,0 +1,1 @@
+status = ['with you', 'anime openings', '.cmd', 'some cool music', 'a genshin impact', 'with Xingqiu!', 'a sweet tune!', 'anime!', '.helpme', 'never gonna give you up, never gonna let you down.', 'nothing-', 'with my food haha', 'with your emotions', 'in theaters near you', "with the McDonald's ice cream machine", 'with deez nutz', 'with Paimon!']
