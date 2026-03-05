@@ -3,12 +3,14 @@ from discord.ext.commands import command
 from discord.ext.commands import Bot, guild_only
 from discord.ext import commands
 import discord
+import asyncio
 from lib.util.cmd import version
 from lib.util.functions import boldText
 from lib.util.cmd import seperator
 from lib.util.cmd import log
 from lib.util.reactions import reactions
 from lib.util.colors import colord
+from lib.util.muted import update_muted, remove_muted
 
 
 
@@ -51,8 +53,12 @@ class Mod(Cog):
 
       newmuted = int(member.id)
       muted = (newmuted)
+      guild_id = int(ctx.guild.id)
 
-      #update_muted(muted)
+      saved = await asyncio.to_thread(update_muted, guild_id, muted)
+      if not saved:
+        await ctx.send('Failed to persist muted status to DynamoDB.')
+        return
 
       embed = discord.Embed(title = f'{member.name} has been muted.', color = colord['White'])
       await ctx.send(embed=embed)
@@ -63,8 +69,12 @@ class Mod(Cog):
 
       newmuted = int(member.id)
       muted = (newmuted)
+      guild_id = int(ctx.guild.id)
 
-      #remove_muted(muted)
+      removed = await asyncio.to_thread(remove_muted, guild_id, muted)
+      if not removed:
+        await ctx.send('Failed to persist unmuted status to DynamoDB.')
+        return
 
       embed = discord.Embed(title = f'{member.name} has been unmuted.', color = colord['White'])
       await ctx.send(embed=embed)
